@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formData.from && formData.to) {
       const requestData = `?depart_date=${formData.when}&origin=${formData.from.code}&destination=${formData.to.code}&one_way=true`;
 
-      getData(calendar + requestData, response => {
+      getData(proxy + calendar + requestData, response => {
         renderCheap(response, formData.when);
       }, (e) => {
         alert('В этом направлении нет рейсов.')
